@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Jan 25 16:24:57 2022
+# Process ID: 14312
+# Current directory: D:/Calculatoare numerice/RISC_V_final/RISC_V_final.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source D:/Calculatoare numerice/RISC_V_final/RISC_V_final.sim/sim_1/behav/xsim/xsim.dir/risc_v_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/Calculatoare numerice/RISC_V_final/RISC_V_final.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: D:/Calculatoare numerice/RISC_V_final/RISC_V_final.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/Calculatoare -notrace

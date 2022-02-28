@@ -1,0 +1,81 @@
+Tema programarea calculatoarelor 4
+
+Task 1:
+
+Am alocat dinamic un vector p de arrayLength elemente,in caz de esec am returnat
+NULL.Pentru fiecare element din vectorul array am facut produsul la dreapta si 
+la stanga lui,pe care apoi l-am stocat in vectorul nou alocat.
+
+Task 2:
+
+Am alocat dinamic o matrice p de matrixSize*matrixSize elemente,in caz de esec 
+am returnat NULL.Am considerat conturul matricei si am copiat fiecare element de 
+pe contur in matricea alocata,punand primul element de pe ultima coloana pe prima
+pe pozitia 1 de pe prima linie,dupa care elementul 2 de pe ultima coloana pe 
+pozitia 2 de pe prima linie.Procesul se repeta pentru toate elementele de pe
+contur.Dupa terminare se considera conturul stratul urmator ca contur si se reia 
+procesul descris.In caz ca matricea are elemente impare se copiaza la sfarsit
+elementul din mijloc in matricea nou alocata.
+
+Task 3:
+
+Am alocat dinamic un vector p de queriesNo elemente,in caz de esec 
+am returnat NULL.Am iterat prin setul de cate 4 coordonate(x1,y1,x2,y2) in primul
+for.Dupa care am facut suma elementelor din matrice de la coordonata x1 pana la x2
+,respctiv y1 pana la y2.Am adunat primele elementelele y2 elemente de pe linia x1,
+dupa care primele y2 x1+1 si tot asa pana cand x1+x==x2 si y1+y==y2.
+
+Task 4:
+
+Am alocat dinamic o structura de tip TDriver,iar dupa care am alocat dinamic 
+vectorul de curse de RidesNo elemente.Returnez soferul alocat.
+Am alocat un vector de pointeri de tip TDriver,de lungime driversNo.Pentru fiecare
+element am chemat functia allocDriver si am returnat vectorul de soferi.
+
+Task 5:
+
+Am citit din fisierul binar driversNo.Am alocat un vector cu numarul
+curselor pentru fiecare sofer de lungime *driversNo si am citit din 
+fisierul binar fiecare element.Am folosit functia allocDrivers pentru a aloca un 
+vector de soferi de *driversNo elemente.Am citit pentru fiecare sofer toate informatiile
+campurilor din fisierul binar.
+
+Am scris intr-un fisier binar fiecare camp al fiecarui sofer din vectorul de
+soferi.
+
+Task 6:
+
+Am calculat suma stelelor tuturor curselor,numarul de curse anulate si numarul de curse in
+desfasurare pentru fiecare sofer in parte.Dupa care am calculat ratingul pentru fiecare
+sofer in parte si l-am stocat intr-un vectorul alocat dinamic rating.Am aflat maximul 
+din vector si am retinut indicele la care se afla.Returnez numele soferululi de la indicele
+retinut.
+
+Task 7: 
+
+Am scris functiile auxiliare swapNumbers si swapDrivers pentru a schimba valoriile a doua
+elemente.Am scris functia bubbleSortDrivers care primeste ca parametrii un vector de numere
+,nr elementelor si un vector de soferi TDriver.Cand sunt sortate in ordine crescatoare
+numerele sunt sortati si soferi din vectorul de soferi(se compara elementul de pe pozitia
+i cu cel de pe i+1,de n-1 ori).
+
+Am alocat un vector soferi de lungime resultsNo cu functia allocDrivers.Pentru 
+fiecare sofer din vectorul primit am calculat distanta de la pozitia sa la 
+pozitia dorita.Am retinut aceasta distanta in vectorul p.Am folosit functia 
+bubbleSortDrivers pe vectorul p si vectorul drivers.Odata vectorul drivers 
+sortat am copiat primele resultsNo elemente in vectorul soferi si am returnat
+vectorul soferi.
+
+Task 8:
+
+Am dat free la cursele soferului primit ca paramteru,dupa care am dat free la 
+soferul primit ca parametru.
+
+Am folosit functia freeDriver pe fiecare element al vectorului de soferi.
+
+Unul din motivele pentru care esueaza acest task este probabil faptul ca
+nu am cum sa dau free la vectorul alocat dinamic 
+pe care il returnez la taskul 7,dar la alta solutie
+nu m-am putut gandi.
+
+Daia Gabriel Petru 311CB

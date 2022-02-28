@@ -1,0 +1,62 @@
+Tema Structuri de date 2
+
+Citesc o linie intreaga din fisier.Daca comanda are un al doilea argument 
+folosesc strtok pentru a-l prelua.
+
+Folosesc o structura browser,cu urmatoarele campuri:o lista de structuri
+de tip TTab,o coada pentru descarcari,o coada pentru istoric,un TTab unde
+retin tabul curent,o coada pentru descarcari complete si un o variabila 
+long pentru bandwidth.
+
+Am facut functii pentru alocarea fiecarei tip de structuri si astfel a 
+structurii TBrowser.
+
+Functia newTab adauga o structura de tip TTab la lista de taburi,iar functia
+deleteTabList sterge ultima celula din lista de taburi.
+
+Change tab cauta indexul potrivit in lista de taburi si seteaza campul 
+campul_tab la celula din lista cu indicele respectiv.
+
+Functia printTabs afiseaza totata lisa de taburi.
+
+Functia wait calculeaza numarul de bytes care vor fi distribuiti descarcarilor
+(downloaded).Calculeaza pt prima resursa din coada nr de bytes ramasi pentru 
+descarcare completa(remaining).Daca acest nr este mai mare decat downloaded,i 
+se adauga campului currently_downloaded valoarea downloaded,dupa care downloaded 
+devine 0.In caz contrar currently_downloaded devine egal cu dimension,este 
+extrasa urmatoarea resursa din coada,iar din downloaded se scade remaining.Bucla
+se opreste fie cand downloaded este 0,fie cand nu se mai afla elemente in coada.
+
+Functia goToUrl foloseste functia de alocare a unei paginii pentru a seta campul
+current_page din current_tab.Daca se afla alta pagina deschisa aceasta este 
+stearsa si inlocuita.De asemenea stiva forward este resetata si functia wait 
+apelata cu valoarea 1.
+
+Functiile forward si back seteaza pagina curenta la primul element din stivele 
+forward_stack,respectiv back_stack.
+
+In printHistory se scot pe rand elementele din coada de istoric afisate dupa 
+care introduse intr-o coada auxiliara.Campul global_history este setat la aux
+dupa terminarea operatiilor.
+
+Functia delHistory extrage n elemente din coada de istoric,sau toate daca n 
+este 0.
+
+Functia download adauga o resursa in coada downloads.Calculeaza nr de bytes
+ramasi pentru resursa de adaugat(remaining_1) si fiecare element din coada
+(remaining_2.Rezultatele sunt comparate,iar odata ce remaining_1<=remaining_2
+resursa este adaugata intr o coada auxiliara.Orice ar fi elementele din coada
+downloads sunt adaugate in coada auxiliara.Odata ce aceasta coada auxiliara este
+creata,campul browserului downloaded este setat la aceasta.
+
+Este afisata mai intai coada downloads urmata de cea downloaded.Se creeaza cozi
+auxiliare care sunt setate ulterior la campurile potrivite.
+
+Functia freeTabs elibereaza lista de taburi,iar deleteBrowser structura browser.
+Ambele insa nu elibereaza toata memoria folosita.
+
+normal:85/85
+valgrinf:0/20
+
+Daia Gabriel Petru 311CB
+

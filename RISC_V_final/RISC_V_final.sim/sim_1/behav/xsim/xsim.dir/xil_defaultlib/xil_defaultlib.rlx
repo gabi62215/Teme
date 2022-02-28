@@ -1,0 +1,28 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sim_1/new/risc_v_tb.v,1643155179,verilog,,,,risc_v_tb,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/ALU.v,1643156787,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/ALUcontrol.v,,ALU,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/ALUcontrol.v,1643156275,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/EX.v,,ALUcontrol,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/EX.v,1643133171,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/ID.v,,EX,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/ID.v,1643120682,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/IF.v,,ID,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/IF.v,1643118886,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/IF_ID.v,,IF,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/IF_ID.v,1643118935,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/PC.v,,IF_ID_reg,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/PC.v,1643119143,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/adder.v,,PC,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/adder.v,1643119052,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/control_path.v,,adder,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/control_path.v,1643129366,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/data_memory.v,,control_path,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/data_memory.v,1643120103,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/ex_mem_reg.v,,data_memory,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/ex_mem_reg.v,1643120170,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/forwarding.v,,ex_mem_reg,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/forwarding.v,1643133246,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/hazard_detection.v,,forwarding,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/hazard_detection.v,1643129447,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/id_ex.v,,hazard_detection,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/id_ex.v,1643128189,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/imm_gen.v,,id_ex,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/imm_gen.v,1643119722,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/instruction_memory.v,,imm_gen,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/instruction_memory.v,1643130931,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/mem_wb.v,,instruction_memory,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/mem_wb.v,1643120206,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/mux2_1.v,,mem_wb,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/mux2_1.v,1643119235,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/mux_2_1.v,,mux2_1,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/mux_2_1.v,1643119360,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/mux_4_1.v,,mux_2_1,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/mux_4_1.v,1643119327,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/registers.v,,mux_4_1,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/registers.v,1643119617,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/risc_v.v,,registers,,,,,,,,
+D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/risc_v.v,1643191112,verilog,,D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sim_1/new/risc_v_tb.v,,RISC_V,,,,,,,,

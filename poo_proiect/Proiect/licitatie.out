@@ -1,0 +1,151 @@
+Brokerul 0 are 1
+Brokerul 0 are 2
+Brokerul 0 are 3
+0 1900 2000.0 tablou Picasso ulei
+1 1970 1000.0 mobila masa lemn
+2 2015 3000.0 bijuterie fier true
+3 1480 3900.0 tablou DaVinci ulei
+4 2003 100.0 mobila scaun plastic
+5 2019 700.0 bijuterie plastic false
+6 1850 1000.0 tablou Grigorescu tempera
+7 1950 1500.0 mobila dulap lemn
+8 2021 150.0 bijuterie fier false
+9 2020 200.0 tablou Daia acrilic
+10 2020 5000.0 mobila pat lemn
+11 1750 8000.0 bijuterie aur true
+12 1911 1500.0 tablou Tonitza ulei
+13 2021 50.0 mobila scaun plastic
+14 2017 400.0 bijuterie aluminiu false
+15 1860 4567.0 tablou Monet tempera
+16 2021 2000.0 mobila masa aluminiu
+17 2015 6570.0 bijuterie argint true
+18 1877 4321.0 tablou VanGogh acrilic
+19 1700 7000.0 mobila biblioteca lemn
+Incepe licitatie pentru produsul:
+0 1900 2000.0 tablou Picasso ulei
+Pasul:1
+Nr maxim pasi:3
+Cea mai mare suma licitata:2000.0 pentru produsul cu id-ul:0
+Client 0 liciteaza:2095.0
+Comision perceput:419.0
+Client 1 liciteaza:2082.5
+Comision perceput:416.5
+Client 2 liciteaza:2102.5
+Comision perceput:420.5
+Pasul:2
+Nr maxim pasi:3
+Cea mai mare suma licitata:2102.5 pentru produsul cu id-ul:0
+Client 0 liciteaza:2147.5
+Comision perceput:429.5
+Client 1 liciteaza:2142.5
+Comision perceput:428.5
+Client 2 liciteaza:2207.5
+Comision perceput:441.5
+Pasul:3
+Nr maxim pasi:3
+Licitatia castigata cu suma 2207.5 de Sara calea victoriei 12 26.11.2001
+Brokerul 0 are 2
+Brokerul 0 are 3
+Brokerul 0 are 4
+1 1970 1000.0 mobila masa lemn
+2 2015 3000.0 bijuterie fier true
+3 1480 3900.0 tablou DaVinci ulei
+4 2003 100.0 mobila scaun plastic
+5 2019 700.0 bijuterie plastic false
+6 1850 1000.0 tablou Grigorescu tempera
+7 1950 1500.0 mobila dulap lemn
+8 2021 150.0 bijuterie fier false
+9 2020 200.0 tablou Daia acrilic
+10 2020 5000.0 mobila pat lemn
+11 1750 8000.0 bijuterie aur true
+12 1911 1500.0 tablou Tonitza ulei
+13 2021 50.0 mobila scaun plastic
+14 2017 400.0 bijuterie aluminiu false
+15 1860 4567.0 tablou Monet tempera
+16 2021 2000.0 mobila masa aluminiu
+17 2015 6570.0 bijuterie argint true
+18 1877 4321.0 tablou VanGogh acrilic
+19 1700 7000.0 mobila biblioteca lemn
+20 2000 50.0 bijuterie plastic false
+Incepe licitatie pentru produsul:
+3 1480 3900.0 tablou DaVinci ulei
+Pasul:1
+Nr maxim pasi:3
+Cea mai mare suma licitata:3900.0 pentru produsul cu id-ul:3
+Client 3 liciteaza:3980.0
+Comision perceput:995.0
+Suma maxima depasita!Suma licitata automat
+Client 4 liciteaza:0.0
+Comision perceput:0.0
+Suma maxima depasita!Suma licitata automat
+Client 5 liciteaza:0.0
+Comision perceput:0.0
+Pasul:2
+Nr maxim pasi:3
+Cea mai mare suma licitata:3980.0 pentru produsul cu id-ul:3
+Client 3 liciteaza:3995.0
+Comision perceput:998.75
+Suma maxima depasita!Suma licitata automat
+Client 4 liciteaza:0.0
+Comision perceput:0.0
+Suma maxima depasita!Suma licitata automat
+Client 5 liciteaza:0.0
+Comision perceput:0.0
+Pasul:3
+Nr maxim pasi:3
+Licitatia castigata cu suma 3995.0 de Geaxi magheru 15 SRL 2000.0
+Brokerul 0 are 3
+Brokerul 1 are 1
+Brokerul 0 are 4
+1 1970 1000.0 mobila masa lemn
+2 2015 3000.0 bijuterie fier true
+4 2003 100.0 mobila scaun plastic
+5 2019 700.0 bijuterie plastic false
+6 1850 1000.0 tablou Grigorescu tempera
+7 1950 1500.0 mobila dulap lemn
+8 2021 150.0 bijuterie fier false
+9 2020 200.0 tablou Daia acrilic
+10 2020 5000.0 mobila pat lemn
+11 1750 8000.0 bijuterie aur true
+12 1911 1500.0 tablou Tonitza ulei
+13 2021 50.0 mobila scaun plastic
+14 2017 400.0 bijuterie aluminiu false
+15 1860 4567.0 tablou Monet tempera
+16 2021 2000.0 mobila masa aluminiu
+17 2015 6570.0 bijuterie argint true
+18 1877 4321.0 tablou VanGogh acrilic
+19 1700 7000.0 mobila biblioteca lemn
+20 2000 50.0 bijuterie plastic false
+21 2020 200.0 tablou Daia acrilic
+Incepe licitatie pentru produsul:
+2 2015 3000.0 bijuterie fier true
+Pasul:1
+Nr maxim pasi:3
+Cea mai mare suma licitata:3000.0 pentru produsul cu id-ul:2
+Client 1 liciteaza:3010.0
+Comision perceput:602.0
+Suma maxima depasita!Suma licitata automat
+Client 0 liciteaza:0.0
+Comision perceput:0.0
+Client 2 liciteaza:3062.5
+Comision perceput:612.5
+Client 1 liciteaza:3047.5
+Comision perceput:609.5
+Pasul:2
+Nr maxim pasi:3
+Cea mai mare suma licitata:3062.5 pentru produsul cu id-ul:2
+Client 1 liciteaza:3165.0
+Comision perceput:633.0
+Suma maxima depasita!Suma licitata automat
+Client 0 liciteaza:0.0
+Comision perceput:0.0
+Client 2 liciteaza:3090.0
+Comision perceput:618.0
+Client 1 liciteaza:3127.5
+Comision perceput:625.5
+Pasul:3
+Nr maxim pasi:3
+Licitatia castigata cu suma 3127.5 de Matei valea ialomitei 13 29.05.2000
+Brokerul 0 are 3
+Brokerul 1 are 1
+Brokerul 1 are 2

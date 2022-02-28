@@ -1,0 +1,37 @@
+Tema Structuri de date 1
+
+Se citeste comanda in variabila cmd.Se face o copie a acesteia in cmd_2,deoare-
+ce cmd va fi prelucrata de functia strtok.Se construieste variabila eroare li-
+pind cmd de "Unknown command:" ,se adauga ghilimele lui cmd si punct la sfarsit.
+Pentru identificare fiecarei comenzi se apeleaza strtok odata.Daca comenziile au
+nevoie doar de un argument,apelez strtok din nou si il pasez la functia respec-
+tiva.Functiile care au mai multe argumente primesc cmd_2 si prelucreaza argumen-
+tele.
+
+INIT_DB aloca spatiu pentru baza de date si copiaza numele in campul name.
+Am implementat adugarea la sfarsitul listei pentru fiecare tip de lista.
+Aloc o celula,iterez pana la ultima si leg celula nou alocata.
+
+Functia CREATE foloseste functiile implementate pentru a crea un tabel. 
+
+Am scris functii de afisare pentru fiecare tip de date si pentru afisarea co-
+loanelor.Acestea sunt folosite pentru a afisa un tabel si baza de date.
+
+DELETE_DB foloseste functii de dealocare pentru fiecare tip de lista.
+Ulterior pentru functia de DELETE cu relatie am adaugat funcitii de dealocare
+a unei singure linii.
+
+Functia addLine adauga o linie intr-un tabel dupa tipul de date am tabelului,
+folosind functiile addIntCell,addFloatCell,addStringCell.
+
+Am scris functii de afisare a unei linii pentru fiecare tip de date.Acestea 
+sunt folosite de diferitele functii de relatie(intEqual,intGreater etc),care 
+sunt apelate de functia SEARCH in functie de tipul tabelului.
+
+Functia DELETE functioneaza asemanator cu SEARCH.De data aceasta functiile de
+relatie(intEqualDelete) sterg toate liniile care respecta conditia.
+
+85/85 normal
+16.25/20
+
+Daia Gabriel Petru 311CB

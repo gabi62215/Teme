@@ -1,0 +1,14 @@
+step
+(#,0,B) (#,0,ABA) (CA,4,B) (ZT,3,A) (D,2,BBB) (BAA,4,ADC) (CB,3,AAA)
+6
+5
+4 C 5 A H
+3 A 5 C R
+0 C 2 B R
+0 B 1 A L
+1 # 4 A R
+2 D 4 C R
+4 A 2 B L
+2 B 1 D H
+4 B 3 D L
+0 A 3 B R

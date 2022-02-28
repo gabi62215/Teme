@@ -1,0 +1,32 @@
+Tema programarea calculatoarelor 1
+
+Task 0:Am citit de la tastatura 4 valorii ale lui ip1.Am grupat toate aceste valorii pe 4 bytes punand prima variabila intr-un long si shiftand la stanga de 8 ori.Am repetat procesul pt celalalte variabile(functia conversieInBiti).
+Pentru a afisa adresa de ip am folosit o valoare ajutatoare x=255(primii 8 biti au valoarea 1).Prima valoare de la stanga am afisat-o cu functia luata din checker print_most_significant_byte,care shifteaza la dreapta bitii de 24 de ori.Urmatoarele valorii le-am afisat realizand si-logic intre x si adresa data shiftata de 16,8 respectiv 0 ori(printAdrese).
+
+Task 1:Pentru a forma masca intr-o variabila am calculat nr format de n biti de 1 consecutivi,l-am asezat intr-o variabila dupa care am shiftat aceea variabila la stanga de 32-n ori(functia conversieMasca).Am folosit functia printAdrese pentru a afisa masca.
+
+Task 2:Am folosit functia conversieInBiti dupa care am modificat functia printAdrese,inlocuind in functia printf speciferul cu %X pt baza 16,respectiv %o pt baza 8.
+
+Task 3:Am realizat si-logic intre ip1 si masca creata la taskul 1.Pt afisare am folosit functia printAdrese.
+
+Task 4:Am realizat sau-logic intre ip1 si complementul mastii create la taskul 1.Pt afisare am folosit functia printAdrese.
+
+Task 5:Am format ip2 folosind functia conversieInBiti,dupa care am realizat si-logic intre ip2 si masca creata la taskul 1.Avand ambele adrese de retea am verificat daca acestea sunt egale.Daca acestea sunt am afisat "DA",in caz contrar "NU".
+
+Task 6:Am folosit functia verificareMasca.Am presupus ca masca este corecta(presupunere=1) si am creat o variabila care se schimba la valoarea 1 odata ce trebuie sa apara doar 1 in masca(inceput_succesiune).Am parcurs fiecare bit din masca si am verificat daca acesta este 1 sau 0.Odata ce am gasit primul bit de 1 variabila inceput_succesiune a luat valoare 1.Odata ce acest lucru s-a intamplat,daca am mai intalnit 0 in masca presupunerea a devenit 0,instructiunea for s-a intrerupt si a fost returnata variabila presupunere.Am verificat pe rand daca biti sunt setati folosind functia de la laborator is_set.Aceasta creeaza o masca care are pe pozitia i 1 si in rest 0.Daca si-logic dintre masca si numar este egal cu 0 bitul nu este setat,pentru orice alta valoare(putere a lui 2) bitul este setat.
+
+Task 7:Am parcurs inca odata masca,retinand cel ami semnificativ bit de 0 pt a face corectia(functia celMaiSemnificativBit0).Avand aceasta pozitie stiuta am parcurs masca pana la aceasta,setand fiecare bit la 0 pe parcurs(functia corectareMasca).Am setat fiecare bit la 0 folosind functia de la laborator reset.Aceasta foloseste complementul mastii cu bitul i setat 1,pentru a returna valoarea data de si-logic dintre variabila data si masca creata.
+
+Task 8:Am parcurs ip1 si am verificat fiecare bit daca este setat(functia printAdreseBinar).Daca bitul este setat am afisat 1,in caz contrar 0.Daca pozitia a fost 24,16 sau 8 am afisat punct pt a separa cele 4 valorii.
+
+Task 9:Am creat o matrice pt a memora n adrese de retea formate din 5 variabile(net).Am creat 2 vectori (masti si adrese_de_retea_citite).In vectorul masti am pus fiecare valoare data de functia conversieMasca apelata cu masca citita (n[k][4],mastiile se afla pe coloana 4 a matricii),iar in vectorul adrese_de_retea_citite am pus fiecare valoare data de functia conversieInBiti apelata cu valoriile citie(n[k][0],n[k][1],n[k][2],n[k][3]).Am verificat daca masca si ip2 este egala cu adrese_de_retea_citite si masca.Daca acestea sunt egale am afisat indicele adresei respective
+
+Daia Gabriel Petru 311CB
+
+
+
+
+
+
+
+

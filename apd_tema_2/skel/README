@@ -1,0 +1,45 @@
+Tema Algoritmi Paraleli si Distribuiti 2
+
+Pentru implementarea temei am folosit ExecutorService.Pentru fiecare tip de
+task(Map sau Reduce),am creat o lista de taskuri pe care le-am adaugat la
+executor.Am folosit invokeAll pentru asta,dar si pentru a ma asigura ca
+se asteapta terminarea tuturor task-urilor.
+
+Clasa Reader se ocupa de citirea si parsarea fisierului initial de intrare.
+Metoda read() intoarce o lista cu caiile catre fiecare citit pe care urmeaza
+sa se aplice Map,respectiv Reduce.Pe baza acestor informatii se creeaza task
+-urile de tip Map,avand dimensiunea specificata in fisieru initial si calculandu-se
+dimensiunea fiecarui fisier din lista.
+
+Clasa MapTask se ocupa de aplicarea operatiei de Map.Functia call() itereaza prin
+numarul de bytes asignati anterior si creeaza un dictionar cu cheia reprezentata
+de numarul de litere,iar valoarea de numarul de cuvinte cu aceea lungime.Pentru
+a verifica daca offsetul duce fix in mijlocul unui cuvant se verifica byte-ul
+anterior offsetului din fisier(daca offsetul nu este 0).Daca byte-ul anterior este
+o litera sau o cifra,atunci inseamna ca ne aflam in mijlocul unui cuvant si trebuie
+cititi bytes pana cand se intalneste un caracter separator,se termina fisierul sau
+se termina numarul de bytes primiti.Odata trecuta peste aceasta etapa,se incepe
+numararea literelor(si cifrelor) din cuvant,iar odata ce se intalneste un nou
+caracter separator se modifica dictionarul si se verifica daca cuvantul curent
+trebuie adaugat la lista de cuvinte maximale.Operatia se termina daca se depa-
+seste numarul de bytes alocati si daca este parsat si cuvantul curent sau daca
+se ajunge la capatul fisierului.Se intorc dictionarul si lista de cuvinte
+maximale.
+
+Clasele Result si ReduceResult reprezinta rezultatul intors de fiecare tip de
+task.
+
+Clasa ReduceTask se ocupa de aplicarea operatiei de Reduce.Aceasta primeste
+rezultatele task-urilor de tip Map,grupate dupa fisierul pe care au actionat.
+In functia call() se itereaza prin rezultate.Se creeaza un nou dictionar
+format din toate dictionariile realizare de MapTask.Practic se aduna acelasi
+numarul aparitiilor cuvintelor cu acelasi numar de litere de la fiecare
+MapTask.Se creeaza o lista de cuvinte maximale comparand valoriile din fiecare
+lista primita de la fiecare MapTask.Apoi se calculeaza numarul de rangul
+fisierului,cu ajutorul dictionarului creat,conform formulei din cerinta.
+
+Clasa Writer se ocupa de scrierea rezultatelor primite de la ReduceTask in
+fisierul de ouput specificat.Se realizeaza rotunjirea rangului si se obtine
+numele fisierului din calea primita in fisierul initial de intrare.
+
+Daia Gabriel Petru 331CB

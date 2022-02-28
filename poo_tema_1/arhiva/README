@@ -1,0 +1,22 @@
+Tema 1 Programare orientata pe obiecte
+
+Am creat clasa Street care functioneaza ca un nod in implementarea grafului.
+Aceasta contine si o lista de obiecte Traffic,unde se adauga restrictiile 
+citite de la tastatura.Implementeaza interfata Comparable pentru lucrul cu 
+coada de prioritati.
+
+Clasa Graph implementeaza structura graf,cu ajutorul unui dictionar.Sunt 
+prezente functii de adaugare Strada,restrictie,comanda drive si citirea grafului.
+
+Clasa abstracta Vehicle este parintele claselor Car,Truck,Motorcycle and Bike,
+folosite pentru calculul costului unui tip de vehicul pe o strada cu ajutorul 
+metodei abstracte calculateCost.Functia drive din interiorul clasei Graph
+instantiaza obiectul corect si il paseaza mai departe dijkstra din clasa Dijkstra.
+In aceasta clsa este implementat algoritmul pentru cel mai scurt drum,cu verificare 
+gabaritului pentru fiecare strada.
+
+Clasele ReadFile si WriteFile se ocupa citirea si afisarea in fisierele map.in,
+respectiv map.out.Clasa Main se ocupa cu parsarea comenziilor si chemarea functiilor 
+potrivite.
+
+Daia Gabriel Petru 321CB

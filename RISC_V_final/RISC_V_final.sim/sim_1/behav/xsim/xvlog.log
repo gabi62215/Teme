@@ -1,0 +1,49 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/ALUcontrol.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcontrol
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/IF_ID.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF_ID_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/control_path.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_path
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/data_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/ex_mem_reg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ex_mem_reg
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/forwarding.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module forwarding
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/hazard_detection.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hazard_detection
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/id_ex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module id_ex
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/imm_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module imm_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/instruction_memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instruction_memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/mem_wb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_wb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/mux2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/mux_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/mux_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/risc_v.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RISC_V
+INFO: [VRFC 10-2458] undeclared symbol PC_write, assumed default net type wire [D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/risc_v.v:19]
+INFO: [VRFC 10-2458] undeclared symbol IF_IFwrite, assumed default net type wire [D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/risc_v.v:26]
+WARNING: [VRFC 10-2938] 'PC_write' is already implicitly declared on line 19 [D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sources_1/new/risc_v.v:87]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Calculatoare numerice/RISC_V_final/RISC_V_final.srcs/sim_1/new/risc_v_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module risc_v_tb

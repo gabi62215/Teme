@@ -1,0 +1,21 @@
+Proiect Programare orientata pe obiecte
+
+Proiectul implementeaza o casa de licitatii.Un thread adauga produse in lista de produse a casei,
+iar celalalt primeste comenzi de la tastatura (fisier test{nr}.txt) .
+Comenziile posibile sunt:
+
+1)listproducts care listeaza toate produsele curente din casa
+2)joinbid id_client id_produs suma_maxima care inscrie clientul id_client la lciitatia pentru
+produsul id_produs
+3)quit care incheie executia programului
+
+Am implementat urmatoarele design patternuri:
+1)Singleton deoarece tot timpul exista o singura casa de licitatii
+2)Builder pentru a putea construi produsele pas cu pas
+3)Factory pentru a putea crea mai usor toate cele 3 tipuri de produse
+4)Command pentru a executa mai eficient comenzile preluate din terminal
+
+Odata la 4 comenzi se verifica daca se poate porni vreo licitatie
+La o licitatie pot participa 3 clienti,nici mai mult nici mai putin
+
+Daia Gabriel Petru 312CB

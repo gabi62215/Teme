@@ -1,0 +1,51 @@
+loadcsv amazon_co-ecommerce_cleaned.csv
+listcurrencies
+addcurrency GBP £ 1.10
+listcurrencies
+getstorecurrency
+setstorecurrency GBP
+getstorecurrency
+updateparity GBP 1.09
+getstorecurrency
+addiscount PERCENTAGE 30 "30% Black Friday"
+calculatetotal eac7efa5dbd3d667f26eb3d3ab504464 e12b92dbb8eaee78b22965d2a9bbbd9f
+showproduct eac7efa5dbd3d667f26eb3d3ab504464
+listproducts
+listmanufacturers
+addiscount PERCENTAGE 20 "20% Black Friday"
+addiscount PERCENTAGE 10 "10% Black Friday"
+addiscount FIXED 30 "30% Black Friday"
+listdiscounts
+calculatetotal eac7efa5dbd3d667f26eb3d3ab504464 e12b92dbb8eaee78b22965d2a9bbbd9f
+listcurrencies
+addcurrency FRN CHF 1.10
+updateparity GBP 1.03
+listcurrencies
+getstorecurrency
+listdiscounts
+addiscount FIXED 1 "30% Black Friday"
+addiscount PERCENTAGE 10 "30% Black Friday"
+listproductsbymanufacturarer Adidas
+calculatetotal eac7efa5dbd3d667f26eb3d3ab504464
+savecsv store.csv
+loadcsv amazon_co-ecommerce_cleaned.csv
+applydiscount PERCENTAGE 20
+showproduct eac7efa5dbd3d667f26eb3d3ab504464
+updateparity GBP 1.10
+setstorecurrency FRN
+savecsv store_prices_eur.csv
+listproducts
+listmanufacturers
+showproduct 6c4062e5b0da136365915b470ec9d4a4
+calculatetotal 6c4062e5b0da136365915b470ec9d4a4 e12b92dbb8eaee78b22965d2a9bbbd9f
+loadcsv amazon_co-ecommerce_cleaned.csv
+listcurrencies
+getstorecurrency
+applydiscount PERCENTAGE 30
+savecsv store_prices_eur.csv
+listdiscounts
+addiscount PERCENTAGE 30 "420"
+listdiscounts
+addiscount PERCENTAGE 30 "trec la poo"
+savecsv store_prices_eur.csv
+quit

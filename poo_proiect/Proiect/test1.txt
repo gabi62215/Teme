@@ -1,0 +1,16 @@
+joinbid 0 0 3000
+joinbid 1 0 2334
+joinbid 2 0 4567
+listproducts
+joinbid 3 3 5680
+joinbid 4 3 2345
+joinbid 5 3 200
+listproducts
+joinbid 0 2 2313
+joinbid 1 2 4567
+joinbid 2 2 3124
+listproducts
+joinbid 3 5 5678
+joinbid 5 5 1234
+joinbid 4 5 1239
+quit

@@ -1,0 +1,24 @@
+step
+(E##,0,RKK#) (KE,6,K#EK#) (#KE##,6,#KEE#K) (E,6,KE#EK) (##K#K,6,E#) (KK##E,3,EK) (KK#,6,K#) (#E#,6,KEEEK) (EKE,0,EK) (#,6,E#EK) (KKK#,6,KK#) (E##K,0,K#) (#EEEE,6,EEK#E) (K,6,EK) (EK#K,4,KKE) (EEK,6,#K#) (#E,6,KKKE) (#EE#,6,EEEKE#) (KKEK,6,KKE) (EEE,6,K#KK#) (KKKK#,6,K#KE) (#K,6,#K#) (EK,6,E#EK) (EK#E,4,KEE) (EKEE,6,KK##EE) (EKEE#,6,RKK##K) (KE,4,##EK) (KEEE,6,E##KK) (E,6,#E#EKK) (##E,1,EEKE) (KKE,6,K#K) (EEKE#,6,E#K#) (E#,4,##) (K#,6,KKE) (##E#E,6,K#) (K####,2,KEKE) (##,6,KKK#) (KKE##,6,#E#EE) (KEEK,5,KEE##E) (E#K##,6,E#E) (##KE,6,#KKE#) (EE,1,EEKK#) (EE,6,#KKK) (#E#EE,6,E##EE) (##KE,0,E#KK) (#E#KE,6,KK#) (KKE,6,#EEE#E) (EEK,6,EEE) (#EKEE,6,#EKEE#) (KEE,6,KE##) (K###E,6,RE) (E,6,E#EEE) (EEKKE,6,E#KEEK) (#E#,0,K#E) (EE###,6,#E#K) (KE#,6,#EE) (EEE#E,1,EE#E) (EK,6,KEEKKK) (#E#,6,K#EE#) (EKKKK,5,##K#EK) (K##E,6,#KE) (#E,6,##EEEK) (E#,3,EKE#K#) (KE,6,K#KEE) (E#,6,###K#E) (##EE#,5,EKK#K) (EEE,6,#KKKK) (E,6,K#) (K#KK#,3,EE) (K,6,#K) (##E#,6,KEEEEE) (#KKKE,1,KEE##E) (E,6,EK#KEE) (#KE,6,KKEKE#) (K#,5,K#KE) (E,6,RKK#E#) (EKEK#,6,#EEKE#) (KK,5,#K#E) (E##,6,#EKE) (EEEKE,6,EK#E) (EE,6,#EEEE) (KK#K,6,K#EE) (EKKKE,6,KE) (###,6,EE#E) (EE,6,EE) (KEK,6,KE#) (EK#,6,EE#EE#) (EK,6,E###) (EE,6,KE#K) (#E,5,K##E) (EEK,6,E#) (EKK,6,KE#) (K,3,##KK) (EK##E,6,##KEK) (E#,6,EEE) (#EEK,3,KEKK#E) (EE#,6,#E###) (K##,6,K#E###) (EEEEE,6,#K#) (#EKK#,6,#KKE) (E###,4,R#KEK) (KE,2,EEE) (#E,6,E#E) (KK##E,6,#EE#E) (KKE#E,4,E#E#E) (#,6,K#KK#) (KKEE,6,EKEE) (KE#E,6,##) (K##K#,6,EEK) (E,6,K#KK) (#EEK#,3,KKEE#K) (K#,6,KE) (E#K#,6,EKE) (##KK#,0,KE##K) (#K,6,K#E#E) (EEE,6,KE#) (E,6,E#EK) (#K#K,6,#EKKK) (#,6,#K#E) (#,0,#E#) (##,6,#EEKE) (E,6,#K#E) (#KK,3,###EKK) (#KKE,6,EK#) (E##KK,6,KE)
+8
+7
+0 E 0 E R
+0 K 0 K R
+0 # 1 # L
+1 E 2 K L
+2 E 4 E L
+2 K 4 K L
+2 # 4 E L
+4 E 7 K H
+4 # 7 K H
+1 K 3 E L
+3 E 4 K L
+3 # 4 K L
+3 K 5 E L
+5 # 6 E L
+5 E 6 E L
+5 K 6 K L
+4 K 6 E L
+6 K 6 E L
+6 E 7 K H
+6 # 7 K H

@@ -1,0 +1,33 @@
+Daia Gabriel 311CB
+
+1.
+
+Pentru generarea sistemului am creat o matrice cu vecinii fiecarei intersectii.
+Pe coloana 1 se gasesc toti vecinii intersectiei 1,pe coloana 2 se gasesec
+toti vecinii intersectiei 2 si asa mai departe.Pe diagonala principala am
+pus numarul total de legaturi(de ex pt intersectia 1:2 legaturi catre alte 
+intersectii si alte 2 catre iesire).Odata aceasta matrice create am scazut
+tuturor elementelor diferite de 0,care nu se afla de diagonala principala 2.
+
+2.
+
+Am initializat centroizii initial dupa formula ceruta si am pus fiecare punct 
+in clusterul dorit.Pentru fiecare punct am calculat distanta fata de fiecare
+centroid,dupa care l-am pus in clusterul cu indicele centroidului cu distanta
+cea mai mica.Dupa aceasta, am recalculat centroizii pentru fiecare cluster
+si am repetat pasii descrisii pana cand toti cei NC centroizii nu si-au mai 
+schimbat pozitia cu mai mult de 1e-5.Pentru functia compute am modificat functia
+anterioara ca sa returneze si clusterele si am facut suma ceruta.
+
+3.
+
+Am generat vectorul cu intervale dupa formula data si am apelat functia histc.
+Deoarece functia histc considera ultimul element din vector ca fiind un interval
+format dintr-un scalar,am sters fiecare element de pe a count_bins+1 pozitie.
+Pentru histograma HSV am procedat asemanator,modificand vectorul de intervale.
+
+
+
+
+
+

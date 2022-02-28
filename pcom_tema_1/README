@@ -1,0 +1,46 @@
+Tema Protocoale de comunicatii 1
+
+Functia read_rtable se ocupa de parsarea adresei de rutare.Primeste numele
+fisierului ca parametru.Functia citeste linie cu linie din fisier si foloseste
+strtok pentru a separa numerele.Stocarea adreselor se face prin shiftarea
+bitiilor la stanga de 8 ori la fiecare numar intors de atoi().
+
+Functia compare primeste 2 structuri de tipul route_table_entry si intoarce
+1 daca prima are prefixul mai mare,-1 daca il are mai mic sau 0 in caz de 
+egalitate.
+
+Functia binary_search realizeaza o cautare binara pentru adresa dorita
+si masca de pe pozitia i.In caz ca nu are nici un match intoarce -1,altfel
+indexul din vectorul de route_table_entry
+
+Functiile get_best_route si parse_arp_table sunt din laboratorul 4 si au 
+fost folosite inainte de implementarea protocolului arp.
+
+In while se intampla procesele descrise in cerinta.Variabila check este folosita
+pentru a verifica daca pachetul primit a fost de tipul ICMP REQUEST.
+
+Se verifica daca pachetul primit este de tip ARP.Daca este de tip REQUEST
+se cauta pe fiecare interfata adresa ip pentru a raspunde cu mac-ul potrivit si
+se trimite un ARP REPLY.Daca este tip REPLY,se adauga o intrare noua in 
+arp_table si se trimite pachetul din coada daca acesta trebuie dirijat catre 
+intrarea nou adaugata.
+
+Se verifica ttl si in caz de eroare se trimite un icmp corespunzator,se verifica
+checksum-ul iar in caz ca este gresit se arunca pachetul.Se decrementeaza ttl-ul
+si se updateaza checksum-ul.Se cauta ruta,iar in caz ca nu se gaseste se trimite
+un icmp corespunzator.
+
+Functia get_arp_entry cauta ip-ul primit ca paramteru in tabela arp.In caz ca nu
+il gaseste intoarce NULL.Atunci se trimite un ARP REQUEST si se adauga pachetul in 
+coada,facandu-se o copie a acestuia in c_m.Daca ip-ul este gasit se trimite pachetul
+mai departe.
+
+Problema pe care nu o pot rezolva este legata de testul router_icmp.Lucrul ciudat
+este ca daca execut testul in topologie manual (ping de pe h0 la 192.168.0.1) 
+primesc raspuns (utilitarul ping arata 0% packet loss).Am folosit wireshark pe
+h0 pentru a monitoriza traficul si chiar si aici apare un pachet ICMP REPLY,dar
+wireshark scrie la ICMP REQUEST-ul corespunzator acestui reply No response found!.
+Las un link cu un screenshot.
+
+https://imgur.com/a/Fcck2O2
+Daia Gabriel Petru 321CB

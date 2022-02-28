@@ -1,0 +1,20 @@
+DATABASE: SC
+
+TABLE: ELEVI
+NUME                           PRENUME
+------------------------------ ------------------------------ 
+GEANI                          M
+DAIA                           G
+VASILE                         V
+MARSANU                        V
+
+DATABASE: SC
+
+TABLE: ELEVI
+NUME                           PRENUME
+------------------------------ ------------------------------ 
+GEANI                          M
+DAIA                           G
+VASILE                         V
+MARSANU                        V
+

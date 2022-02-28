@@ -1,0 +1,31 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../RISC_V_final.srcs/sources_1/new/ALU.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/ALUcontrol.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/EX.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/ID.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/IF.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/IF_ID.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/PC.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/adder.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/control_path.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/data_memory.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/ex_mem_reg.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/forwarding.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/hazard_detection.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/id_ex.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/imm_gen.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/instruction_memory.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/mem_wb.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/mux2_1.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/mux_2_1.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/mux_4_1.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/registers.v" \
+"../../../../RISC_V_final.srcs/sources_1/new/risc_v.v" \
+"../../../../RISC_V_final.srcs/sim_1/new/risc_v_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

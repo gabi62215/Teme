@@ -1,0 +1,9 @@
+Tema 1 Introducere în organizarea calculatoarelor și limbaj de asamblare
+
+Am parcurs caracter cu caracter string-ul primit iar odata ce am intalnit % 
+m-am ocupat de fiecare caz in parte.Pentru afisarea numerelor am implementat
+functiile myItoa si myUnsignedItoa,cu ajutorul codului de pe
+https://www.geeksforgeeks.org/implement-itoa/
+
+Checker local:100/100
+Daia Gabriel Petru 321CB

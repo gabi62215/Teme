@@ -1,0 +1,30 @@
+Tema Proiectarea Algoritmilor 1
+
+Problema 1
+Am sortat calculatoarele de la cel cu puterea cea mai mica pana la cel cu
+puterea cea mai mare.Dupa care,odata ce am gasit un calculator cu puterea
+mai mare decat cel precedent,am adus toate calculatoarele din spate la
+puterea calculatorului curent,adaugand cate 1 unitate la fiecare.Daca 
+calculatoarele au ajuns toate la acelasi nivel si au mai ramas bani,le-am 
+crescut pe toate uniform cu 1 incepand de la primul.
+
+Complexitate: O(N^2 * (computers[i].coins > computers[i - 1].coins))
+Worst case apare cand avem putine calculatoare si o diferenta foarte mare
+intre ele,datorita cresterii doar cu 1 unitate,de accea pica si testele
+6 si 12.
+
+Problema 2
+Am adaptat problema rucsac de la laborator,adaugand inca o conditie.
+
+Complexitate: O(N*L*B)
+
+Problema 3
+Am inceput sa excavez si din stanga si din dreapta.Odata ce am ajuns la elemetul
+minim cu una din directii (dreapta sau stanga),m-am oprit acolo cu excavatul si
+am continuat doar in partea opusa.Am tratat cazurile cand sirul dat este 
+crescator sau descrescator si de asemena cazul in care sirul este format doar
+din 3 numere.
+
+Complexitate: O(N)
+
+Daia Gabriel 321CB

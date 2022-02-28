@@ -1,0 +1,10 @@
+Tema Algoritmi Paraleli si Distribuiti 1
+
+Am paralizat doar sortarea indiviziilor,inlocuind qsort-ul cu un merge sort
+paralelizat.Algoritmul imparte vectorul in bucati in functie de cate thread-uri
+sunt folosite,face merge sort pe fiecare bucata,iar la final dupa ce toate
+thread-urile si-au terminat treaba,interclaseaza bucatiile sortate.Nu am reusit
+sa sincronizez thread-urile pentru a realiza toate calculele,asa ca am pornit
+si oprit thread-uri in mod repetat.Cu toate astea implementarea scaleaza.
+
+Daia Gabriel Petru 331CB

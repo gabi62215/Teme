@@ -1,0 +1,79 @@
+Tema Sisteme de operare 1
+
+Am implementat 2 structuri pentru rezolvarea temei
+in fisierele structures.c si structures.h.Acestea
+sunt folosite pentru a stoca lista de directoare si
+asocieriile dintre symbol si mapping.Implementarea
+hash map-ului este una banala,consistand intr-un 
+vector de structuri ce contin o cheie si o valoare.
+Accesul este liniar,iar structura este alocata pe heap
+
+Functia parse_file se ocupa de procesul propriu zis de
+preprocesare.Citeste linie cu linie fie de la tastatura
+fie de la un fisier de input si decide ce sa faca in functie
+de aceasta.
+Odata ce linia este citita,se salveaza o copie a acesteia,
+deoarece urmeaza sa fie sparta in tokeni cu ajutorul functiei
+strtok.Odata avut primul "cuvant" de pe linie se verifica daca
+acesta este o directiva si se decide actiunea dorita.
+
+1)Define
+Se extrag de pe linie simbolul si mapping-ul.Daca linia contine
+un backslash la final se adauga mapping la o noua variabila,iar
+urmatoare linii sunt si ele adaugate pana la lipsa backslashului
+
+2)Undefine
+Se extrage cheia si se sterge elementul cu cheia corespunzatoare
+din hash map
+
+3)Include
+Se extrage fisierul din linie si se cauta in directorul curent/
+directorul fisierului de input/directoarele din lista.Daca se 
+gaseste,se apeleaza recursiv functia parse_file si se face append
+la buffer-ul de scriere
+
+4)Ifdef/Ifndef
+Se extrage simbolul si verifica daca exista/nu exista in hash_map.
+Daca exista,variabile ifdef se seteaza pe 1,altfel 0.Aceasta 
+dicteaza daca o linie este scrisa sau nu in buffer.
+
+5)If
+Se extrage conditia si se evalueaza.Din nou se seteaza variabila
+ifdef corespunzator
+
+6)Lipsa directiva
+Se verifica daca cuvantul contine o intrare in hash si se face
+inlocuirea daca este cazul
+
+In cazul unei directive se iese din while-ul prin care se obtin
+tokenii,altfel procesul continua.Varibile directive marcheaza linia
+ca fiind o directiva si deci nu se adauga in buffer
+
+Am implementat toate functionalitatiile,dar ultimul test pica impreuna
+cu penutimul test de memorie
+
+Nu am inteles exact rolul argumentului -o deoarece testele nu prelau
+numele de acolo.Principala problema a venit din dezobisnuirea de
+lucrat cu c si memorie si de la scriptul de coding style.Am petrecut
+minim 3 ore pentru a trece de acesta,timp care ar fi putut fi folosit
+pentru a face debugging la ultimul test.In loc de asta am stat sa adaug
+spatii intre if si paranteze si alte lucrurii de genul.Inteleg de ce
+este necesar sa mentii un coding style,dar nu inteleg de ce este impus
+unul.Chiar e capat de tara daca mie imi place sa scriu else-ul cu o
+linie mai jos de acolada de la if?O alta problema a fost intampinarea
+eroriilor de tip invalid read de la valgrind,pe care la penutlimul test
+nu am reusit sa le rezolv
+
+Pentru compilare se da comanda make/nmake in functie de sistemul de
+operare.Sunt generate fisierele obiect,dupa care executabilul.Comanda
+make clean sterge executabilul si fisierele obiect.
+
+Executabilul se poate rula cu:
+1)-Idirector sau -I director pt specificarea unui director
+2)-D symbol=mapping sau -Dsymbol=mapping pt specificarea unui simbol.
+Mapping este optional si este inlocuit cu sirul vid daca lipseste
+3)-o file sau -ofile care specifica un fisier pentru output
+4)file simplu este considerat fisierul de intrare,in lipsa acestuia
+se citeste de la stdin
+
+Daia Gabriel Petru 331CB

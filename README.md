@@ -72,3 +72,6 @@ Implementarea unei baze de date formata din liste
 sd_tema_2 (c)
 Implementarea unui browser,care foloseste cozi si stive
 
+so_tema_1 (c)
+Implementarea unui preprocesor care compileaza si pe Windows si pe Linux
+

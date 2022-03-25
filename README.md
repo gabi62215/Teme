@@ -75,3 +75,5 @@ Implementarea unui browser,care foloseste cozi si stive
 so_tema_1 (c)
 Implementarea unui preprocesor care functioneaza atat pe Windows cat si pe Linux
 
+chess_bot (c)
+Implementarea unui bot de sah,capabil doar de a face mutari corecte

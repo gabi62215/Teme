@@ -77,3 +77,6 @@ Implementarea unui preprocesor care functioneaza atat pe Windows cat si pe Linux
 
 chess_bot (c)
 Implementarea unui bot de sah,capabil doar de a face mutari corecte
+
+so_tema_2 (c)
+Implementarea bibliotecii stdio, intr-o varianta mai simpla

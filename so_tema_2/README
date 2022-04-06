@@ -1,0 +1,99 @@
+Tema Sisteme de operare 2
+
+Pentru rezolvarea temei am folosit structura so_file.
+Astfel fiecare camp reprezinta:
+
+buffer_r = buffer intern pt operatiile de tip read
+
+buffer_w = buffer intern pt operatiile de tip write
+
+fd = file descriptorului fisierului curent
+
+buff_cursor_w = cursor pt buffer-ul de write
+
+buff_cursor_r = cursor pt buffer-ul de read
+
+buff_size_r = tine minte nr de bytes cititi de read, 
+folosit pentru cazul in care read nu resuseste sa 
+citeasca BUFSIZE bytes
+
+end_of_file = este 1 daca s-a ajuns la finalul fisierului
+
+error = este 1 daca s-a detectat o eroare
+
+cursor = cursorul fisierului
+
+last_operation = ultima operatie executata(SEEK,WRITE,READ)
+
+pid = pid-ul procesului copil creat cu so_popen
+
+SO_FILE *so_fopen(const char *pathname, const char *mode):
+Functia deschide un fisier cu permisiuniile specificate de
+mode. Aloca o structura SO_FILE numita file, careia i se
+initializeaza toate campurile
+
+int so_fclose(SO_FILE *stream):
+Inchide file descriptorul asociat stream-ului dupa care
+elibereaza structura
+
+so_feof,so_ferror,so_fileno,fo_ftell:
+returneaza campurile specifice din structura
+
+ssize_t xwrite(int fd, const void *buf, size_t count):
+Functia preluata din laborator, face un while pana cand 
+se scriu count bytes in fisier
+
+int so_fflush(SO_FILE *stream):
+Scrie datele din buffer-ul de write cu ajutorul functiei
+xwrite si reseteaza buffer_w si buffer_cursor_w
+
+int so_fgetc(SO_FILE *stream):
+Intoarce caracterul de pozitia buff_cursor_r din buffer_r,
+dupa care incrementeaza cursorul fisierului si cel al 
+buffer-ului. Daca buffer-ul este gol sau plin,se reseteaza
+si se citeste din fisier din nou
+
+int so_fputc(int c, SO_FILE *stream):
+Scrie in buffer_w pe pozitia buffer_cursor_w, dupa care
+incrementeaza cursorul fisierului,respectiv cel al 
+buffer-ului. Daca buffer-ul este plin se foloseste
+so_fflush pentru a scrie datele in fisier
+
+size_t so_fread(void *ptr, size_t size, size_t nmemb, SO_FILE *stream):
+Daca buffer-ul este gol sau plin citeste din fisier date. Verifica
+daca bytes care trebuie cititi depasesc dimensiunea datelor din
+buffer,pentru a copia dimensiunea corespunzatoare,scade nr de bytes
+copiati din nr total de bytes care trebuie cititi si repeta procesul
+pana cand sunt cititi toti bytes. Este incrementat cursorul buffer-ului
+si cel al fisierului cu numarul de bytes copiati,astfel odata ce 
+cursorul buffer-ului ajunge la dimensiunea maxima,functia este nevoita
+sa aduca din nou date din fisier
+
+size_t so_fwrite(const void *ptr, size_t size, size_t nmemb, SO_FILE *stream):
+Daca buffer-ul de write este full scrie datele catre fisier. Altfel se copiaza
+atatia bytes din ptr cat este spatiu in buffer_w (BUFSIZE - buff_cursor_w)
+si se scad din nr de bytes totali care trebuie scrisi. Procesul se repeta
+pana ce bytes_to_write ajunge 0
+
+int so_fseek(SO_FILE *stream, long offset, int whence):
+Daca operatia de dinainte a fost de READ sau WRITE reseteaza 
+buffer_r si scrie datele din buffer_w cu so_fflush. Verifica
+daca whence-ul este valid si apeleaza lseek pt deplasarea
+cursorului,actualizand cursor cu valoarea intoarsa de lseek
+
+SO_FILE *so_popen(const char *command, const char *type):
+Decide in functie type locatia unde se va face redirectarea.
+Se creeaza un pipe dupa care procesul copil face redirectarea
+si executa comanda primita ca parametru cu execlp.Procesul parinte
+creeza o structura SO_FILE si o intoarce
+
+int so_pclose(SO_FILE *stream):
+Inchide descriptorul de fisier,asteapta procesul copil dupa care
+da free pe stream
+
+Biblioteca se genereaza cu ajutorul Makefile-ului folosind
+comanda make din care va rezulta libso_stdio.so
+Comanda make clean sterge biblioteca si fisierele obiect
+
+
+Daia Gabriel Petru 331CB

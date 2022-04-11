@@ -1,0 +1,60 @@
+Starting test 1
+Finished test 1
+Test 1:		PASSED
+Starting test 2
+Finished test 2
+Test 2:		PASSED
+Starting test 3
+Finished test 3
+Test 3:		PASSED
+Starting test 4
+Finished test 4
+Test 4:		PASSED
+Starting test 5
+Finished test 5
+Test 5:		PASSED
+Starting test 6
+Finished test 6
+Test 6:		PASSED
+Starting test 7
+Finished test 7
+Test 7:		PASSED
+Starting test 8
+Finished test 8
+Test 8:		PASSED
+Starting test 9
+Finished test 9
+Test 9:		PASSED
+Starting test 10
+TIMEOUT. Test 10 exceeded maximum allowed time of 60
+Finished test 10
+Test 10:		FAILED
+
+Run pylint
+
+************* Module consumer
+tema/consumer.py:48:16: C0103: Variable name "op" doesn't conform to snake_case naming style ('([^\\W\\dA-Z][^\\WA-Z]{2,}|_[^\\WA-Z]*|__[^\\WA-Z\\d_][^\\WA-Z]+__)$' pattern) (invalid-name)
+tema/consumer.py:64:22: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+tema/consumer.py:52:24: W0612: Unused variable 'i' (unused-variable)
+tema/consumer.py:11:0: W0611: Unused import logging (unused-import)
+************* Module marketplace
+tema/marketplace.py:130:0: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:206:0: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:21:0: C0115: Missing class docstring (missing-class-docstring)
+tema/marketplace.py:27:4: C0116: Missing function or method docstring (missing-function-docstring)
+tema/marketplace.py:31:4: C0116: Missing function or method docstring (missing-function-docstring)
+tema/marketplace.py:32:12: C0103: Variable name "x" doesn't conform to snake_case naming style ('([^\\W\\dA-Z][^\\WA-Z]{2,}|_[^\\WA-Z]*|__[^\\WA-Z\\d_][^\\WA-Z]+__)$' pattern) (invalid-name)
+tema/marketplace.py:31:4: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+tema/marketplace.py:39:4: C0116: Missing function or method docstring (missing-function-docstring)
+tema/marketplace.py:42:12: C0103: Variable name "x" doesn't conform to snake_case naming style ('([^\\W\\dA-Z][^\\WA-Z]{2,}|_[^\\WA-Z]*|__[^\\WA-Z\\d_][^\\WA-Z]+__)$' pattern) (invalid-name)
+tema/marketplace.py:49:0: C0115: Missing class docstring (missing-class-docstring)
+tema/marketplace.py:56:4: C0116: Missing function or method docstring (missing-function-docstring)
+tema/marketplace.py:65:4: C0116: Missing function or method docstring (missing-function-docstring)
+tema/marketplace.py:67:8: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+tema/marketplace.py:169:8: C0206: Consider iterating with .items() (consider-using-dict-items)
+************* Module producer
+tema/producer.py:50:20: W0612: Unused variable 'i' (unused-variable)
+
+------------------------------------------------------------------
+Your code has been rated at 8.62/10 (previous run: 8.62/10, +0.00)
+

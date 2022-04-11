@@ -12,7 +12,7 @@ import time
 from threading import Lock
 
 logging.basicConfig(
-    handlers=[RotatingFileHandler('./my_log.log', maxBytes=100000, backupCount=10)],
+    handlers=[RotatingFileHandler('./marketplace.log', maxBytes=100000, backupCount=10)],
     level=logging.DEBUG,
     format="[%(asctime)s] %(levelname)s %(message)s",
     datefmt='%Y-%m-%dT%H:%M:%S')
@@ -98,8 +98,6 @@ class Marketplace:
 
         self.logger = logging.getLogger('logger')
 
-        self.logger.info("ceva")
-
     def register_producer(self):
         """
         Returns an id for the producer that calls this.
@@ -111,9 +109,9 @@ class Marketplace:
                 self.queue_size_per_producer)
 
             self.available_id_prod = self.available_id_prod + 1
-            return self.available_id_prod - 1
 
-        self.logger.info("ceva")
+            self.logger.info("register returns %d",self.available_id_prod - 1)
+            return self.available_id_prod - 1
 
     def publish(self, producer_id, product):
         """
@@ -127,7 +125,11 @@ class Marketplace:
 
         :returns True or False. If the caller receives False, it should wait and then try again.
         """
-        return self.buffers[producer_id].add(product)
+        self.logger.info("in publish producer_id = %s and product is %s",producer_id,product)
+        result = self.buffers[producer_id].add(product)
+        
+        self.logger.info("publish returns %s",result)
+        return result
 
     def new_cart(self):
         """
@@ -141,6 +143,8 @@ class Marketplace:
             self.carts[self.available_id_cart] = Cart()
 
             self.available_id_cart = self.available_id_cart + 1
+
+            self.logger.info("new_cart returns %d",self.available_id_cart - 1)
             return self.available_id_cart - 1
 
     def add_to_cart(self, cart_id, product):
@@ -159,12 +163,17 @@ class Marketplace:
         # search for product in each producer buffer
         # if it is found add it to cart and return True,otherwise return False
         # alse save producer id in case the product will be removed
+        self.logger.info("in add_to_cart cart_id = %s and product = %s",cart_id,product)
+
+        result = False
         for key in self.buffers:
             if self.buffers[key].remove(product):
                 self.carts[cart_id].add(product, key)
-                return True
+                result = True
+                break
 
-        return False
+        self.logger.info("add_to_cart returns %s",result)
+        return result
 
     def remove_from_cart(self, cart_id, product):
         """
@@ -178,9 +187,12 @@ class Marketplace:
         """
 
         # extract id from product in cart and add it back to producer buffer
+        self.logger.info("in remove_from_cart cart_id = %s and product = %s",cart_id,product)
+
         aux = self.carts[cart_id].remove(product)
         self.buffers[aux[1]].add(product)
 
+        self.logger.info("remove_from_cart returns %s",aux[0])
         return aux[0]
 
     def place_order(self, cart_id):
@@ -190,4 +202,9 @@ class Marketplace:
         :type cart_id: Int
         :param cart_id: id cart
         """
-        return self.carts[cart_id].buy()
+        self.logger.info("in place_order cart_id = %s",cart_id)
+        
+        result = self.carts[cart_id].buy()
+        self.logger.info("place_order returns %s",result)
+
+        return result

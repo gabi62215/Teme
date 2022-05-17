@@ -1,50 +1,62 @@
-#
-#  4 - Thread Scheduler (Linux)
-#
-#  2017, Operating Systems
-#
+Tema Sisteme de operare 4
 
-# Archive:
+Pentru rezolvarea temei am folosit mai multe structuri printre care:
 
-> Makefile.checker
-> README
-> run_all.sh
-> _test/
-	> run_test,c
-	> run_test.h
-	> scheduler_test.h
-	> so_scheduler.h
-	> test_exec.c
-	> test_io.c
-	> test_sched.c
+scheduler_t:
+quantum: timpul alocat unui thread pe procesor
+io_devices: numarul de device-uri IO
+curr_thread: thread-ul curent de pe procesor
+thread_no: numarul de thread-uri create
+ready: o coada cu thread-uri in starea READY
+terminated: o coada cu thread-uri in starea TERMINATED
+waiting: vectori de cozi pentru fiecare device io, in firecare coada gasindu-se
+thread-uri in starea waiting
+finished: semafor pentru semnalizarea terminarii tuturor thread-urilor
+lock: mutex folosit pentru diferite operatii
 
-# Build:
+thread_t:
+id: thread id
+priority: prioritatea thread-ului
+function: functia ce trebuie executata
+planned: semafor pentru semnalizare terminarii planificarii
+running: semfaor pentru a semnaliza ca un thread ruleaza pe procesor
 
-The local directory must contain the thread scheduler library
-(libscheduler.so). Use the Makefile.checker to properly build the run_test
-executable:
+queue_t, list_t:
+O coada de prioritati implementata cu ajutorul unei liste inlantuite
 
-	make -f Makefile.checker
+Implementare:
 
-This command will also run all tests and print out the results.
+int so_init(unsigned int time_quantum, unsigned int io):
+Initializeaza campurile scheduler-ului, alocand memorie pentru fiecare
+si punand valoarea initiala corespunzatoare.
 
-# Run:
+tid_t so_fork(so_handler *func, unsigned int priority):
+Creeaza un thread nou alocand o structura thread_t cu functia si
+prioritatea corespunzatoare. Odata ce planfificarea thread-ului este
+realizata de functia start_thread aceasta returneaza id-ul thread-ului.
 
-In order to run the test suite you can either use the run_all.sh script or
-the run_test executable. The loader must be able to locate the library
-(libscheduler.so) (use LD_LIBRARY_PATH).
+int so_wait(unsigned int io):
+Pune thread-ul in starea waiting si este adaugat in coada specifica io. Acesta
+asteapta pana cand ajunge din nou in starea running. De asemenea se trece
+primul thread din coada ready in starea running.
 
-The run_all.sh script runs all tests and computes assignment grade (95 points
-maximum):
+int so_signal(unsigned int io):
+Semnalizeaza toate thread-urile asociate lui io ca acestea pot trece din
+waiting in ready,urmand a fi planificate si ulterior a rula pentru a semnaliza
+semaforul din so_wait.
 
-	LD_LIBRARY_PATH=. ./run_all.sh
+void so_exec(void):
+Incrementeaza timpul thread-ului curent de pe de procesor. Daca acesta atinge
+limita quantum din scheduler acesta este trecut in starea ready si urmatorul
+thread din coada ready este setat ca si current_thread. Daca un thread din
+coada ready are prioritatea mai mare,iarasi thread-ul curent este schimbat.
 
-In order to run a specific test, pass the test number (1 .. 20) to the run_test
-executable:
+void so_end(void):
+Elibereaza toate resursele alocate de init
 
-	LD_LIBRARY_PATH=. ./_test/run_test 1
+Pentru compilare se foloseste comanda make
 
-# Debug:
+Nu am reusit sa fac toate testele sa treaca, nu reusesc sa imi dau seama de
+unde vine problema.
 
-For debugging, define the SO_VERBOSE_ERROR symbol.
-
+Daia Gabriel 331CB

@@ -17,6 +17,7 @@ void *pop(queue_t *q)
 
 	cell_t *aux = q->front;
 	void *value = q->front->value;
+
 	q->front = aux->next;
 
 	free(aux);
@@ -27,6 +28,7 @@ void *pop(queue_t *q)
 queue_t *new_queue(void)
 {
 	queue_t *q = malloc(sizeof(queue_t));
+
 	if (q) {
 		q->front = NULL;
 		q->back = NULL;
@@ -37,9 +39,7 @@ queue_t *new_queue(void)
 
 void delete_queue(queue_t **q, void (*free_value)(void *))
 {
-	//printf("ce naiba\n");
 	delete_list(&((*q)->front), free_value);
-	//printf("aici\n");
 	free(*q);
 	*q = NULL;
 }
@@ -47,8 +47,8 @@ void delete_queue(queue_t **q, void (*free_value)(void *))
 int insert(queue_t *q, void *value, int (*get_priority)(void *))
 {
 	int value_priority = get_priority(value);
-
 	cell_t *to_insert = new_cell(value);
+
 	if (!to_insert)
 		return -1;
 
@@ -62,7 +62,7 @@ int insert(queue_t *q, void *value, int (*get_priority)(void *))
 		cell_t *p = q->front;
 		cell_t *ant = NULL;
 
-		while (p != NULL && get_priority(q->front->value) > value_priority) {
+		while (p != NULL && get_priority(q->front->value) >= value_priority) {
 			ant = p;
 			p = p->next;
 		}
